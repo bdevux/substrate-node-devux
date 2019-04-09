@@ -128,6 +128,10 @@ git = 'https://github.com/paritytech/substrate.git'
 package = 'sr-version'
 rev = '59d5ec144704cec017a01f3e4dbb6b73c5542bf7'
 
+[dependencies.parity-codec-derive]
+default-features = false
+version = '3.0'
+
 [features]
 default = ['std']
 std = [
@@ -151,5 +155,6 @@ std = [
     'safe-mix/std',
     'consensus-aura/std',
     'offchain-primitives/std',
-  "consensus_authorities/std",
+    "consensus_authorities/std",
+    "parity-codec-derive/std",
 ]
