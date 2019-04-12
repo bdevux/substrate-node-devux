@@ -1,0 +1,36 @@
+[package]
+name = "node-executor"
+version = "1.0.0"
+authors = ["Parity Technologies <admin@parity.io>"]
+description = "Substrate node implementation in Rust."
+edition = "2018"
+
+[dependencies]
+trie-root = "0.12"
+parity-codec = "3.2"
+runtime_io = { package = "sr-io",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+state_machine = { package = "substrate-state-machine",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+substrate-executor = {  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+primitives = { package = "substrate-primitives",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+trie = { package = "substrate-trie",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+node-primitives = { path = "../primitives" }
+node-runtime = { path = "../runtime" }
+
+[dev-dependencies]
+keyring = { package = "substrate-keyring",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+runtime_primitives = { package = "sr-primitives",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+runtime_support = { package = "srml-support",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+balances = { package = "srml-balances",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+session = { package = "srml-session",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+staking = { package = "srml-staking",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+system = { package = "srml-system",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+consensus = { package = "srml-consensus",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+timestamp = { package = "srml-timestamp",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+treasury = { package = "srml-treasury",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+contract = { package = "srml-contract",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+grandpa = { package = "srml-grandpa",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+indices = { package = "srml-indices",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+wabt = "~0.7.4"
+
+[features]
+benchmarks = []

@@ -10,3 +10,4 @@ cargo run --release \-- \
 # cargo run --release \-- \
 #   purge-chain \
 #   --base-path /tmp/bob \
+#   --chain=local

@@ -1,0 +1,39 @@
+[package]
+name = "node-cli"
+version = "1.0.0"
+authors = ["Parity Technologies <admin@parity.io>"]
+description = "Substrate node implementation in Rust."
+build = "build.rs"
+edition = "2018"
+
+[dependencies]
+log = "0.4"
+tokio = "0.1.7"
+futures = "0.1"
+exit-future = "0.1"
+cli = { package = "substrate-cli", git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+parity-codec = { version = "3.2" }
+sr-io = { git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+client = { package = "substrate-client",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+primitives = { package = "substrate-primitives",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+inherents = { package = "substrate-inherents",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+node-runtime = { path = "../runtime" }
+node-primitives = { path = "../primitives" }
+hex-literal = "0.1"
+substrate-basic-authorship = {  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+substrate-service = {  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+transaction_pool = { package = "substrate-transaction-pool",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+network = { package = "substrate-network",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+consensus = { package = "substrate-consensus-aura",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+grandpa = { package = "substrate-finality-grandpa",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+sr-primitives = {  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+node-executor = { path = "../executor" }
+substrate-keystore = {  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+substrate-telemetry = { package = "substrate-telemetry",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+
+[dev-dependencies]
+service-test = { package = "substrate-service-test",  git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+
+[build-dependencies]
+cli = { package = "substrate-cli", git = "https://github.com/paritytech/substrate.git",tag = "v1.0.0rc1"}
+structopt = "0.2"
